@@ -1,0 +1,45 @@
+# you create a local copy of the remote repository 
+git clone <repository address>
+
+# you create a new file, "index.html"
+
+# You check the status of the repository, it tells you that there is one untracked file
+git status
+
+# You start tracking a specific file
+git add index.html  
+# or start tracking all file
+git add . 
+
+# Checking again the status tells you that there is a file to commit
+git status
+
+# We commit the file to our local repository, adding the proper message (-m)
+git commit -am "Initial commit"  
+-without -m it will prompt the default text editor
+-without -a it will commit only the file tracked. Remember, if you don't use this option, you have to add the files every time they are modified. 
+
+# To push the changes in our local repository to the remote server
+git push <repository> <branch>
+
+Since  we are in a team, at some point, other users will make changes and we'll need to pull them
+
+# pull changes from the remote repository
+git pull
+
+Branching
+ # to create a branch locally
+git branch <branch name>
+
+# to create the branch in the remote repository, after you have created it locally
+git push origin <branch name>
+ 
+ # to change a branch
+git checkout <branch name>
+ 
+# to merge the branch1 in branch 2
+git checkout <branch1>
+git merge <branch2>
+
+# to delete a branch 
+git branch -d <branch name>
